@@ -1,1 +1,1 @@
-This is a quick little polling project using d3js, backbone/underscores and firebase.
+This is a little project exploring d3, backbone, firebase and es6 modules.
