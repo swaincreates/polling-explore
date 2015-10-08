@@ -1,0 +1,1 @@
+This is a quick little polling project using d3js, backbone/underscores and firebase.

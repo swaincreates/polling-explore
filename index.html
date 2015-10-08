@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="bower_components/underscore/underscore-min.js"></script>
+    <script src="bower_components/backbone/backbone.js"></script>
+    <script src="bower_components/firebase/firebase.js"></script>
+   
+    <!-- <script src="https://cdn.firebase.com/js/client/2.3.1/firebase.js"></script> -->
+    <!-- <script src="https://cdn.firebase.com/libs/backbonefire/0.5.1/backbonefire.js"></script> -->
+    <script src="bower_components/backbonefire/backbonefire.js"></script>
+    <script src="bower_components/d3/d3.min.js"></script>
+
+    <title>Backbone Test</title>
+</head>
+<body>
+<header>
+<!-- Navbar -->
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">ASPPH Poll</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+<!--            <li><a href="#">Link <span class="sr-only">(current)</span></a></li>
+            <li><a href="#">Link</a></li>
+ -->              
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+    
+</header>
+<div class="container">
+<div class="row">
+    
+    <div class="col-md-6" style="margin-top: 25px;"><div id="barchart"></div></div>
+    <div class="col-md-5 col-md-offset-1"><div id="poll"></div></div>
+</div>
+    
+</div>
+
+
+<script type="text/template" id="polling-template">
+
+<p><%= question %></p>
+<ol type="A">
+    <% _.each(answers, function(answer, index) {%>
+        <li>
+            <div class="btn btn-default" id="answer<%= index %>" data-id="<%= index %>"><%= answer %></div>
+            
+        </li>
+    <% }); %>
+
+</ol>
+</script>
+<!-- <script src="//localhost:35729/livereload.js"></script> -->
+<script src="build/build.js"></script>
+</body>
+</html>
